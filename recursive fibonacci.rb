@@ -1,14 +1,7 @@
-def fibs(n)
-    fib_array=[0,1]
-    n1= 0
-    n2= 1
-    until fib_array.length == n do
-        result = n1 + n2
-        fib_array.push(result)
-        n1 = n2
-        n2 = result
-    end
-    fib_array
+def fibs(n,fib=[0,1])
+until n == fib.length do
+    fib.push(fib[-1]+fib[-2])
+end
 end
 
 def fibs_rec(n ,fib_arr=[0,1])
@@ -19,4 +12,3 @@ def fibs_rec(n ,fib_arr=[0,1])
     fibs_rec(n,fib_arr)
     end   
 end
-
